@@ -1,0 +1,13 @@
+query GetAllUsersByUsername ($orderBy: [UsersOrderBy!] = USERNAME_ASC) {
+  users(orderBy: $orderBy) {
+    edges {
+      node {
+        username
+        firstName
+        lastName
+        ip
+        
+      }
+    }
+  }
+}

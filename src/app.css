@@ -1,10 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
-	body {
-		@apply bg-background;
+	:root{
+	--black:#333;
+	--light-color:#cdaa7c;
+	--box-shadow: 0.5rem 1.5rem rgba(0,0,0,.1)
+	}
+	*{
+		font-family: 'Roboto', sans-serif;
+		margin:0;
+		padding:0;
+		box-sizing:border-box;
+		text-decoration:none;
+		border:none;
+		outline:none;
+		text-transform:capitalize;
+		transition: all .2s linear;
+	}
+	html{
+		font-size: 62.5%;
+		overflow-x:hidden;
+		scroll-behavior:smooth;
+	}
+	.navbar a{
+		@apply my-2 mx-1;
+	}
+	header .icon a {
+		@apply  flex my-2 mx-0.5 rounded p-3 justify-center transition ease-in-out delay-150 hover:-translate-y-2 duration-300;
 	}
 	.pill {
 		@apply text-center font-semibold py-3 text-headline flex px-4 transition ease-in-out delay-150 hover:-translate-y-2  duration-300;
@@ -12,4 +37,5 @@
 	.window-btn{
 		@apply inline-block h-3 w-3 rounded-[50%] bg-headline border-2 border-buttonText absolute top-[10px]
 	}
-} ;
+	
+} 
